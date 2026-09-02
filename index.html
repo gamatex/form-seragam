@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#126fe8">
+  <title>Form Ukuran Seragam Karyawan</title>
+  <style>
+    :root{--blue:#0877e8;--purple:#7648ea;--ink:#17233d;--muted:#65718a;--line:#dfe6f1;--bg:#f2f6fc;--ok:#138a55}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    .hero{background:linear-gradient(120deg,var(--blue),#3d6ee9 55%,var(--purple));color:#fff;padding:42px 20px 116px;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:360px;height:360px;border:70px solid rgba(255,255,255,.07);border-radius:50%;right:-100px;top:-190px}
+    .hero-inner,.wrap{max-width:1080px;margin:auto}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;opacity:.88}.hero h1{font-size:clamp(27px,5vw,44px);line-height:1.08;margin:12px 0}.hero p{max-width:650px;margin:0;line-height:1.65;opacity:.92}
+    .wrap{margin-top:-78px;padding:0 20px 60px;position:relative}.card{background:#fff;border-radius:20px;box-shadow:0 20px 55px rgba(23,35,61,.13);padding:clamp(22px,4vw,42px)}
+    .section{margin-bottom:34px}.section-title{display:flex;gap:12px;align-items:center;margin-bottom:18px}.num{display:grid;place-items:center;width:34px;height:34px;flex:0 0 auto;border-radius:10px;color:#fff;background:linear-gradient(135deg,var(--blue),var(--purple));font-weight:800}.section h2{font-size:21px;margin:0}.section-note{color:var(--muted);font-size:14px;margin:4px 0 0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.field label,.uniform>label{display:block;font-size:14px;font-weight:750;margin:0 0 8px}.req{color:#db304d}.field input,.field select{width:100%;height:48px;border:1px solid var(--line);border-radius:11px;padding:0 14px;font:inherit;color:var(--ink);background:#fff;outline:none}.field input:focus,.field select:focus{border-color:#4982ee;box-shadow:0 0 0 3px rgba(73,130,238,.13)}
+    .uniforms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.uniform{border:1px solid var(--line);border-radius:15px;padding:16px;background:#fbfdff}.garment{height:118px;display:grid;place-items:center;margin-bottom:5px}.garment svg{width:110px;height:110px}.uniform select{width:100%;height:46px;border:1px solid var(--line);border-radius:10px;background:#fff;padding:0 12px;font:inherit}
+    details{border:1px solid var(--line);border-radius:14px;margin-top:14px;overflow:hidden;background:#fff}summary{cursor:pointer;padding:16px 18px;font-weight:800;background:#f8faff;list-style:none}summary::-webkit-details-marker{display:none}.chart{padding:16px;overflow:auto}.chart p{font-size:13px;color:var(--muted);margin:0 0 12px}.chart table{border-collapse:collapse;width:100%;min-width:520px;font-size:13px;text-align:center}.chart th{background:#eef4ff;color:#2859aa}.chart th,.chart td{border:1px solid var(--line);padding:9px}
+    .consent{display:flex;align-items:flex-start;gap:10px;padding:14px;background:#f7f9fd;border-radius:11px;font-size:13px;color:var(--muted)}.consent input{margin-top:3px}.actions{display:flex;gap:12px;margin-top:22px}.btn{border:0;border-radius:11px;padding:14px 20px;font:inherit;font-weight:800;cursor:pointer}.primary{flex:1;color:#fff;background:linear-gradient(100deg,var(--blue),var(--purple));box-shadow:0 9px 22px rgba(68,91,221,.24)}.secondary{background:#edf1f7;color:#536078}.btn:disabled{opacity:.65;cursor:not-allowed}
+    .status{display:none;margin-top:18px;padding:15px;border-radius:11px;background:#eaf8f1;color:#087247;font-weight:750}.status.show{display:block}.footer{text-align:center;font-size:12px;color:#7c879e;margin-top:20px}.trap{display:none}
+    @media(max-width:760px){.hero{padding-top:30px}.grid,.uniforms{grid-template-columns:1fr}.card{border-radius:16px}.actions{flex-direction:column}.secondary{order:2}.uniform{display:grid;grid-template-columns:115px 1fr;align-items:center}.uniform .garment{grid-row:1/3;margin:0}.uniform>label{align-self:end}.uniform select{align-self:start}}
+  </style>
+</head>
+<body>
+  <header class="hero"><div class="hero-inner"><div class="eyebrow">Pendataan Karyawan</div><h1>Form Ukuran Seragam</h1><p>Lengkapi data diri dan pilih ukuran seragam yang paling sesuai. Gunakan panduan ukuran sebelum mengirim jawaban.</p></div></header>
+  <main class="wrap"><div class="card">
+    <form id="uniformForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdSCfT1HG22GioNsGgMKayvutQDp_PJBJwFNGo34ozOOQ7cjA/formResponse" method="POST" target="submitFrame">
+      <section class="section"><div class="section-title"><span class="num">1</span><div><h2>Data Karyawan</h2><p class="section-note">Isi sesuai data kepegawaian Anda.</p></div></div>
+        <div class="grid">
+          <div class="field"><label for="name">Nama Lengkap <span class="req">*</span></label><input id="name" name="entry.254941684" required autocomplete="name" placeholder="Masukkan nama lengkap"></div>
+          <div class="field"><label for="nik">NIK <span class="req">*</span></label><input id="nik" name="entry.1490569973" required inputmode="numeric" autocomplete="off" placeholder="Masukkan NIK"></div>
+          <div class="field"><label for="dept">Bagian / Departemen <span class="req">*</span></label><input id="dept" name="entry.1963456216" required placeholder="Contoh: HRGA"></div>
+          <div class="field"><label for="position">Jabatan <span class="req">*</span></label><input id="position" name="entry.1154548364" required placeholder="Masukkan jabatan"></div>
+        </div>
+      </section>
+      <section class="section"><div class="section-title"><span class="num">2</span><div><h2>Pilih Ukuran Seragam</h2><p class="section-note">Pilih satu ukuran untuk setiap jenis seragam.</p></div></div>
+        <div class="uniforms">
+          <div class="uniform"><div class="garment"><svg viewBox="0 0 120 120" aria-label="Kemeja tangan pendek"><path d="M35 18 49 12h22l14 6 23 20-14 18-10-8v58H36V48l-10 8-14-18z" fill="#ddecff" stroke="#2874d3" stroke-width="3"/><path d="m49 12 11 15 11-15M60 27v79" fill="none" stroke="#2874d3" stroke-width="3"/><circle cx="66" cy="39" r="1.8" fill="#2874d3"/><circle cx="66" cy="53" r="1.8" fill="#2874d3"/><path d="M67 60h12v12H67z" fill="none" stroke="#2874d3" stroke-width="2"/></svg></div><label for="shirt">Kemeja Kerja <span class="req">*</span></label><select id="shirt" name="entry.750637555" required><option value="">Pilih ukuran</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>3XL</option></select></div>
+          <div class="uniform"><div class="garment"><svg viewBox="0 0 120 120" aria-label="Celana panjang"><path d="M37 12h46l-4 42 13 52H66L60 62l-6 44H28l13-52z" fill="#e9e3ff" stroke="#6c4ed2" stroke-width="3"/><path d="M41 28h38M60 13v49" fill="none" stroke="#6c4ed2" stroke-width="3"/><path d="M42 35c4 6 8 8 13 8M78 35c-4 6-8 8-13 8" fill="none" stroke="#6c4ed2" stroke-width="2"/></svg></div><label for="pants">Celana Kerja <span class="req">*</span></label><select id="pants" name="entry.166938008" required><option value="">Pilih ukuran</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option><option>32</option><option>33</option><option>34</option><option>35</option><option>36</option><option>37</option><option>38</option><option>39</option><option>40</option></select></div>
+          <div class="uniform"><div class="garment"><svg viewBox="0 0 120 120" aria-label="Kaos tangan pendek"><path d="m40 18 11-6h18l11 6 27 16-11 22-14-7v57H38V49l-14 7-11-22z" fill="#dcf8f1" stroke="#168c70" stroke-width="3"/><path d="M50 13c1 13 19 13 20 0" fill="none" stroke="#168c70" stroke-width="3"/></svg></div><label for="tshirt">Kaos Gamatex <span class="req">*</span></label><select id="tshirt" name="entry.2037812192" required><option value="">Pilih ukuran</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>3XL</option></select></div>
+        </div>
+        <details><summary>📏 Lihat panduan cara mengukur</summary><div class="chart"><p><b>Kemeja/kaos:</b> ukur lebar dada dari ketiak kiri ke kanan. <b>Celana:</b> ukur lingkar pinggang pada posisi celana biasa dipakai. Cocokkan dengan size chart resmi perusahaan/vendor bila tersedia.</p><table><thead><tr><th>Ukuran Atasan</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th><th>3XL</th></tr></thead><tbody><tr><td>Urutan ukuran</td><td>Kecil</td><td>Sedang</td><td>Besar</td><td>Ekstra besar</td><td>2× ekstra</td><td>3× ekstra</td></tr></tbody></table></div></details>
+      </section>
+      <label class="consent"><input type="checkbox" required><span>Saya memastikan data dan ukuran yang dipilih sudah benar.</span></label>
+      <div class="actions"><button class="btn secondary" type="reset">Reset</button><button class="btn primary" id="submitBtn" type="submit">Kirim Data Ukuran</button></div>
+      <div class="status" id="status" role="status">✓ Data berhasil dikirim. Terima kasih telah mengisi ukuran seragam.</div>
+    </form>
+    <iframe class="trap" name="submitFrame" id="submitFrame" title="Pengiriman data"></iframe>
+    <div class="footer">Pastikan koneksi internet aktif saat mengirim data.</div>
+  </div></main>
+  <script>
+    const form=document.getElementById('uniformForm'),frame=document.getElementById('submitFrame'),button=document.getElementById('submitBtn'),statusBox=document.getElementById('status');let sending=false;
+    form.addEventListener('submit',()=>{sending=true;button.disabled=true;button.textContent='Mengirim data…';statusBox.classList.remove('show')});
+    frame.addEventListener('load',()=>{if(!sending)return;sending=false;button.disabled=false;button.textContent='Kirim Data Ukuran';statusBox.classList.add('show');form.reset();statusBox.scrollIntoView({behavior:'smooth',block:'center'})});
+    form.addEventListener('reset',()=>statusBox.classList.remove('show'));
+  </script>
+</body>
+</html>
